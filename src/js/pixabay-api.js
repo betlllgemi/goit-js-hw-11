@@ -1,19 +1,19 @@
-export function fetchImages(searchTerm) {
-  const API_KEY = '55547850-1cf2e31ffe100ace5c093135b';
-  const BASE_URL = 'https://pixabay.com/api/';
+import axios from 'axios';
 
-  const params = new URLSearchParams({
+const API_KEY = '55547850-1cf2e31ffe100ace5c093135b';
+axios.defaults.baseURL = 'https://pixabay.com/api/';
+
+export async function fetchImages(query, page = 1) {
+  const params = {
     key: API_KEY,
-    q: searchTerm,
+    q: query,
     image_type: 'photo',
     orientation: 'horizontal',
-    safesearch: 'true',
-  });
+    safesearch: true,
+    page: page,
+    per_page: 40,
+  };
 
-  return fetch(`${BASE_URL}?${params}`).then(response => {
-    if (!response.ok) {
-      throw new Error('Ağ hatası oluştu!');
-    }
-    return response.json();
-  });
+  const response = await axios.get('', { params });
+  return response.data;
 }

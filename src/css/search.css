@@ -108,3 +108,28 @@ body {
   margin: 20px 0;
   color: #2e2f42;
 }
+.load-more {
+  display: block;
+  margin: 32px auto;
+  padding: 8px 16px;
+
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.load-more:hover {
+  background-color: #6c8cff;
+}
+.load-more.is-hidden {
+  display: none;
+}

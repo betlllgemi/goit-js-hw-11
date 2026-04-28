@@ -1,8 +1,6 @@
 export function renderGallery(images) {
   const gallery = document.querySelector(".gallery");
   
-  gallery.innerHTML = "";
-
   const markup = images
     .map(
       ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
@@ -21,5 +19,5 @@ export function renderGallery(images) {
     )
     .join("");
 
-  gallery.insertAdjacentHTML("beforeend", markup);
+  gallery.insertAdjacentHTML('beforeend', markup);
 }

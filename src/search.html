@@ -23,9 +23,10 @@
         <input type="text" name="query" placeholder="Görsel ara..." required />
         <button type="submit">Ara</button>
       </form>
-
-      <div id="loader" class="loader">Loading images, please wait...</div>
+      <div id="loader-top" class="loader">Loading images, please wait...</div>
       <ul class="gallery"></ul>
+      <button type="button" id="load-more" class="load-more" style="display: none;">Load more</button>
+      <div id="loader-bottom" class="loader">Loading images, please wait...</div>
     </div>
 
     <script type="module" src="./js/search-main.js"></script>
